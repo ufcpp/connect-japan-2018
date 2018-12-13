@@ -1,4 +1,7 @@
-﻿namespace LocalFunctions.Iterator1
+﻿// 「null を渡すとおかしくなるよね」というのを示すためのコードなので意図的に無視
+#pragma warning disable 8604
+
+namespace LocalFunctions.Iterator1
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +10,7 @@
     {
         static void Main()
         {
-            IEnumerable<string> input = null;
+            IEnumerable<string>? input = null;
 
             // input が null なので例外を投げてほしい
             // 多くの人がそれを期待する
