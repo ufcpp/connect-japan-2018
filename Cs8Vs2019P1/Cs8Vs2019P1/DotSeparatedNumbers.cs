@@ -22,7 +22,7 @@ namespace Cs8Vs2019P1
         ///   かといって、使うときは何度も使うので毎回アロケーションしたくない
         /// </summary>
         public ReadOnlySpan<string> Substrings => _substrings ??= GetSubstrings();
-        private string[] _substrings;
+        private string[]? _substrings;
 
         /// <summary>
         /// . の位置だけ記録してる状態から、Substring で文字列を抜き出し。
