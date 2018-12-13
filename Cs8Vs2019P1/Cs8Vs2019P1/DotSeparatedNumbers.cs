@@ -30,10 +30,10 @@ namespace Cs8Vs2019P1
         private string[] GetSubstrings()
         {
             var s = new string[4];
-            s[0] = _text.Substring(0, _i1);
-            s[1] = _text.Substring(_i1 + 1, _i2 - _i1 - 1);
-            s[2] = _text.Substring(_i2 + 1, _i3 - _i2 - 1);
-            s[3] = _text.Substring(_i3 + 1, _text.Length - _i3 - 1);
+            s[0] = _text[.._i1];
+            s[1] = _text[_i1 + 1.._i2];
+            s[2] = _text[_i2 + 1.._i3];
+            s[3] = _text[_i3 + 1..];
             return s;
         }
 
