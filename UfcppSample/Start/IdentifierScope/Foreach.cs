@@ -43,7 +43,7 @@ namespace IdentifierScope.Foreach
 
         public static void M1()
         {
-            Action a = null;
+            Action a = null!;
 
             foreach (var i in Enumerable.Range(0, 10))
             {
@@ -54,7 +54,7 @@ namespace IdentifierScope.Foreach
 
             // C# 3.0 以前: 9が10回表示される
             // C# 4.0 以降: 0～9が1回ずつ表示される
-            a();
+            a!();
         }
     }
 }
