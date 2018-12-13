@@ -1,4 +1,8 @@
-﻿namespace DelegateInternal.Instance
+﻿// こいつはバグってて対処不能。下手に対処しようとするとVSがクラッシュ
+#pragma warning disable 8622
+#pragma warning disable 8602
+
+namespace DelegateInternal.Instance
 {
     using System;
 

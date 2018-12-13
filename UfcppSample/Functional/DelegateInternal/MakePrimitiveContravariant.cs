@@ -1,4 +1,7 @@
-﻿namespace DelegateInternal.MakePrimitiveContravariant
+﻿// こいつはバグってて対処不能。下手に対処しようとするとVSがクラッシュ
+#pragma warning disable 8622
+
+namespace DelegateInternal.MakePrimitiveContravariant
 {
     using System;
 
