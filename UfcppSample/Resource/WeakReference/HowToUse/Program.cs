@@ -17,7 +17,7 @@
 
             // 2.5秒後にオブジェクトを消す
             await Task.Delay(2500);
-            obj = null;
+            obj = null!;
             GC.Collect();
 
             await t;
