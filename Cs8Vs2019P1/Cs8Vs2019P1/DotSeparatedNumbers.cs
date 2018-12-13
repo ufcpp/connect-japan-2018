@@ -47,7 +47,7 @@ namespace Cs8Vs2019P1
             Span<int> digis = stackalloc int[4];
             for (int i = 0; i < 4; i++) digis[i] = int.Parse(strs[i]);
 
-            return $@"({digis[0]:X2})
+            return @$"({digis[0]:X2})
 {digis[1]:X2}-{digis[2]:X2}
 {digis[3]:X2}
 ";
