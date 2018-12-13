@@ -113,10 +113,10 @@ namespace Observable
         public static Task FirstAsync<TArg>(this IEvent<TArg> x)
         {
             var tcs = new TaskCompletionSource<bool>();
-            IDisposable subscription = null;
+            IDisposable? subscription = null;
             subscription = x.Subscribe((sender, arg) =>
             {
-                subscription.Dispose();
+                subscription?.Dispose();
                 tcs.TrySetResult(false);
             });
             return tcs.Task;

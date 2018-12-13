@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable 8622
+
+using System;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 
