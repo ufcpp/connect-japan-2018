@@ -21,17 +21,17 @@ namespace Variance
         public TOut F(TIn x, Func<TOut, TIn> f)
         {
             // f の戻り値は、値を受け取るためにある = in
-            TIn in1 = f(default(TOut));
+            TIn in1 = f(default!);
 
             // f の引数にはこちらから値を渡す = out
-            TOut out1 = default(TOut);
+            TOut out1 = default!;
             var r = f(out1);
 
             // 引数から受け取る = in
             TIn in2 = x;
 
             // 戻り値を返す = out
-            TOut out2 = default(TOut);
+            TOut out2 = default!;
             return out2;
         }
     }
