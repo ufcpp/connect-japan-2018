@@ -21,7 +21,7 @@ namespace Cs8Vs2019P1
         /// = 必ずしも使わないので最初からはアロケーションしたくない
         ///   かといって、使うときは何度も使うので毎回アロケーションしたくない
         /// </summary>
-        public ReadOnlySpan<string> Substrings => _substrings = _substrings ?? GetSubstrings();
+        public ReadOnlySpan<string> Substrings => _substrings ??= GetSubstrings();
         private string[] _substrings;
 
         /// <summary>
