@@ -16,11 +16,11 @@
         {
             var people = new[]
             {
-                new Person {Id = 1, Name = "Jurian Naul" },
-                new Person {Id = 2, Name = "Thomas Bent" },
-                new Person {Id = 3, Name = "Ellen Carson" },
-                new Person {Id = 4, Name = "Katrina Lauran" },
-                new Person {Id = 5, Name = "Monica Ausbach" },
+                new Person(1, "Jurian Naul"),
+                new Person(2, "Thomas Bent"),
+                new Person(3, "Ellen Carson"),
+                new Person(4, "Katrina Lauran"),
+                new Person(5, "Monica Ausbach"),
             };
 
             var locations = new ConditionalWeakTable<Person, string>();
@@ -43,11 +43,11 @@
         {
             var people = new[]
             {
-                new Person {Id = 1, Name = "Jurian Naul" },
-                new Person {Id = 2, Name = "Thomas Bent" },
-                new Person {Id = 3, Name = "Ellen Carson" },
-                new Person {Id = 4, Name = "Katrina Lauran" },
-                new Person {Id = 5, Name = "Monica Ausbach" },
+                new Person(1, "Jurian Naul"),
+                new Person(2, "Thomas Bent"),
+                new Person(3, "Ellen Carson"),
+                new Person(4, "Katrina Lauran"),
+                new Person(5, "Monica Ausbach"),
             };
 
             var locations = new Dictionary<Person, string>();
