@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <StartupObject>Span.SafeStackalloc.Program</StartupObject>
+  </PropertyGroup>
+
+</Project>
