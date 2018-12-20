@@ -5,7 +5,7 @@
     public class Wrapper_byte { public byte Value; }
 
     // 参照型の場合、object 型な1つのクラスに集約
-    public class Wrapper { public object Value; }
+    public class Wrapper { public object? Value; }
 
     class Program
     {

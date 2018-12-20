@@ -13,12 +13,12 @@
         public static Task FirstClickAsync(this Button x)
         {
             var tcs = new TaskCompletionSource<bool>();
-            RoutedEventHandler handler = null;
-            handler = (sender, arg) =>
+            void handler(object sender, RoutedEventArgs arg)
             {
                 x.Click -= handler;
                 tcs.TrySetResult(false);
-            };
+            }
+
             x.Click += handler;
             return tcs.Task;
         }
@@ -31,12 +31,12 @@
         public static Task FirstDoubleClickAsync(this Button x)
         {
             var tcs = new TaskCompletionSource<bool>();
-            MouseButtonEventHandler handler = null;
-            handler = (sender, arg) =>
+            void handler(object sender, MouseButtonEventArgs arg)
             {
                 x.MouseDoubleClick -= handler;
                 tcs.TrySetResult(false);
-            };
+            }
+
             x.MouseDoubleClick += handler;
             return tcs.Task;
         }
@@ -113,10 +113,10 @@ namespace Observable
         public static Task FirstAsync<TArg>(this IEvent<TArg> x)
         {
             var tcs = new TaskCompletionSource<bool>();
-            IDisposable subscription = null;
+            IDisposable? subscription = null;
             subscription = x.Subscribe((sender, arg) =>
             {
-                subscription.Dispose();
+                subscription?.Dispose();
                 tcs.TrySetResult(false);
             });
             return tcs.Task;

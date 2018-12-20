@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable 8622
+
+using System;
 using System.Reactive.Disposables;
 using System.Reactive.Linq;
 
@@ -18,15 +20,15 @@ namespace WeakReferenceSample.WeakEvent
         {
             return Observable.Create((IObserver<T> observer) =>
             {
-                WeakReference<IDisposable> weakSubscription = null;
-                IDisposable subscription = null;
+                WeakReference<IDisposable>? weakSubscription = null;
+                IDisposable? subscription = null;
 
                 subscription = observable.Subscribe(x =>
                 {
                     IDisposable d;
-                    if (!weakSubscription.TryGetTarget(out d))
+                    if (!(weakSubscription?.TryGetTarget(out d) ?? false))
                     {
-                        subscription.Dispose();
+                        subscription?.Dispose();
                         return;
                     }
                     observer.OnNext(x);

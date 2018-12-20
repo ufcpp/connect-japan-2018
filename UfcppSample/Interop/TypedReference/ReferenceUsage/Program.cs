@@ -32,7 +32,7 @@ namespace ReferenceUsage
             else if (value is double) __refvalue(__makeref(value), double) = 1;
             else if (value is char  ) __refvalue(__makeref(value), char  ) = '1';
             else if (value is string) __refvalue(__makeref(value), string) = "1";
-            else value = default(T);
+            else value = default!;
         }
     }
 
@@ -46,7 +46,7 @@ namespace ReferenceUsage
             else if (value is double) value = (T)(object)1.0;
             else if (value is char  ) value = (T)(object)'1';
             else if (value is string) value = (T)(object)"1";
-            else value = default(T);
+            else value = default!;
         }
     }
 }

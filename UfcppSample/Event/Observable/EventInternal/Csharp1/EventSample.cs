@@ -10,7 +10,7 @@
     /// </summary>
     class EventSample
     {
-        private EventHandler _X;
+        private EventHandler? _X;
 
         public event EventHandler X
         {
@@ -42,7 +42,7 @@ namespace Observable.EventInternal.Csharp1Lock
     /// </summary>
     class EventSample
     {
-        private EventHandler _X;
+        private EventHandler? _X;
 
         public event EventHandler X
         {
@@ -79,7 +79,7 @@ namespace Observable.EventInternal.Csharp1Monitor
     /// </summary>
     class EventSample
     {
-        private EventHandler _X;
+        private EventHandler? _X;
 
         public event EventHandler X
         {

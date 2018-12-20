@@ -6,7 +6,7 @@ namespace Variance
     {
         delegate Base F();
 
-        Derived M() { return default(Derived); }
+        Derived M() { return new Derived(); }
 
         void DelegateVariance()
         {

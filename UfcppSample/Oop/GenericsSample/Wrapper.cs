@@ -2,7 +2,7 @@
 {
     public class Wrapper<T>
     {
-        public T Value;
+        public T Value = default!;
     }
 
     class Program

@@ -11,13 +11,13 @@
     /// </summary>
     class EventSample
     {
-        private EventHandler _X;
+        private EventHandler? _X;
 
         public event EventHandler X
         {
             add
             {
-                EventHandler x2;
+                EventHandler? x2;
                 var x1 = _X;
                 do
                 {
@@ -29,7 +29,7 @@
             }
             remove
             {
-                EventHandler x2;
+                EventHandler? x2;
                 var x1 = _X;
                 do
                 {

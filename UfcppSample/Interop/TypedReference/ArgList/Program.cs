@@ -15,7 +15,7 @@
             ArgIterator argumentIterator = new ArgIterator(__arglist);
             while (argumentIterator.GetRemainingCount() > 0)
             {
-                object value = null;
+                object? value = null;
 
                 var r = argumentIterator.GetNextArg(); // 可変個引数の1個1個は TypedReference になっている
                 var t = __reftype(r); // TypedReference から、元の型を取得

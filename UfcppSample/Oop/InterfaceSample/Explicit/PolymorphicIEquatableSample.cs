@@ -2,29 +2,29 @@
 {
     using System;
 
-    abstract class Shape : IEquatable<Shape>
+    abstract class Shape : IEquatable<Shape?>
     {
-        public abstract bool Equals(Shape other);
+        public abstract bool Equals(Shape? other);
     }
 
-    class Rectangle : Shape, IEquatable<Rectangle>
+    class Rectangle : Shape, IEquatable<Rectangle?>
     {
         public double Width { get; set; }
         public double Height { get; set; }
 
-        public override bool Equals(Shape other) => Equals(other as Rectangle);
+        public override bool Equals(Shape? other) => Equals(other as Rectangle);
 
-        public bool Equals(Rectangle other)
+        public bool Equals(Rectangle? other)
             => other != null && Width == other.Width && Height == other.Height;
     }
 
-    class Circle : Shape, IEquatable<Circle>
+    class Circle : Shape, IEquatable<Circle?>
     {
         public double Radius { get; set; }
 
-        public override bool Equals(Shape other) => Equals(other as Circle);
+        public override bool Equals(Shape? other) => Equals(other as Circle);
 
-        public bool Equals(Circle other)
+        public bool Equals(Circle? other)
             => other != null && Radius == other.Radius;
     }
 
@@ -50,17 +50,17 @@
             CompareShape(r1, c1);     // Shape     False
         }
 
-        private static void CompareRectangle(IEquatable<Rectangle> r1, Rectangle r2)
+        private static void CompareRectangle(IEquatable<Rectangle?> r1, Rectangle r2)
         {
             Console.WriteLine("Rectangle " + r1.Equals(r2));
         }
 
-        private static void CompareCircle(IEquatable<Circle> c1, Circle c2)
+        private static void CompareCircle(IEquatable<Circle?> c1, Circle c2)
         {
             Console.WriteLine("Circle    " + c1.Equals(c2));
         }
 
-        private static void CompareShape(IEquatable<Shape> s1, Shape s2)
+        private static void CompareShape(IEquatable<Shape?> s1, Shape s2)
         {
             Console.WriteLine("Shape     " + s1.Equals(s2));
         }

@@ -23,7 +23,7 @@
 
         public static void M1()
         {
-            Action a = null;
+            Action a = null!;
 
             for (int i = 0; i < 10; i++)
             {
@@ -32,12 +32,12 @@
             // ループを抜けたときには、i の値は 10 に置き換わってる
 
             // 結果、10が10回表示される
-            a();
+            a!();
         }
 
         public static void M2()
         {
-            Action a = null;
+            Action a = null!;
 
             for (int i = 0; i < 10; i++)
             {
@@ -46,7 +46,7 @@
             }
 
             // 結果、0～9が1回ずつ表示される
-            a();
+            a!();
         }
     }
 }
